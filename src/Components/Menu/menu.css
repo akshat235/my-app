@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    /* background-color: #fff; Background color for the menu */
+    padding: 20px; /* Padding for the menu */
+  }
+  
+  .menu-button {
+    background-color: #00A699;
+    color: #fff; /* Text color for better visibility */
+    margin-bottom: 10px; /* Margin between buttons */
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .menu-button:last-child {
+    margin-bottom: 0; /* Remove margin for the last button */
+  }
+  
