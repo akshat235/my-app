@@ -1,4 +1,3 @@
-/* Style for the TranslationComponent */
 
 div {
     margin: 20px;
@@ -33,8 +32,6 @@ div {
     margin-top: 20px;
     font-size: 18px;
   }
-  
-  /* Optional: Style the translation result area */
   div {
     border: 1px solid #ddd;
     padding: 10px;
