@@ -113,7 +113,7 @@ const SemanticClassification = () => {
       {result && (
         <div>
           <p>Input Text:</p>
-          <pre>{selectedFile ? inputText : prevText}</pre>
+          <p>{selectedFile ? inputText : prevText}</p>
           <p>Result:</p>
           <pre>{result}</pre>
         </div>
