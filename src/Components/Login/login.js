@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./login.css"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -56,7 +57,9 @@ function Login() {
 
   return (
     <div id="login-container" className="Login">
+              Please provide your credentials!
       <div id="login-form" onSubmit={handleLogin}>
+
         <input
           type="email"
           placeholder="Email"
@@ -77,6 +80,7 @@ function Login() {
         <button type="submit" onClick={handleLogin} disabled={!isFormValid} id="login-button">
           Login
         </button>
+        <button onClick={() => navigate("/register")}>Register</button>
         <span id="error-message">{errorMsg}</span>
       </div>
     </div>

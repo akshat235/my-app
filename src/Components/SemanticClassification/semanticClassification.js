@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './semanticClassification.css';
+import { useNavigate } from 'react-router-dom';
 
 const SemanticClassification = () => {
+
+  const navigate = useNavigate();
+
   const [inputText, setInputText] = useState('');
   const [result, setResult] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
@@ -80,6 +84,7 @@ const SemanticClassification = () => {
 
   return (
     <div>
+      <div>
       <h1>Sentiment Analysis using Hugging Face API </h1>
       <div>
         <label htmlFor="fileInput">Upload Text File:</label>
@@ -114,6 +119,7 @@ const SemanticClassification = () => {
         </div>
       )}
     </div>
+    <button onClick={() => navigate("/menu")} >Go Back</button></div>
   );
 };
 

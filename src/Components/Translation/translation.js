@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import Header from "../Header/header";
+import { useNavigate } from "react-router-dom";
+
+
 
 function TranslationComponent() {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState("Hello, How are you?");
   const [translationResult, setTranslationResult] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const query = async () => {
     try {
@@ -36,7 +40,6 @@ function TranslationComponent() {
 
   return (
     <div className="Basecontainer">
-      {/* <Header /> */}
       <div>
         <h1>Language Translation using T5 models from Hugging Face</h1>
         <label>
@@ -44,6 +47,7 @@ function TranslationComponent() {
           <input
             type="text"
             value={inputText}
+            placeholder="Enter text"
             onChange={(e) => setInputText(e.target.value)}
           />
         </label>
@@ -53,7 +57,9 @@ function TranslationComponent() {
           <strong>Translation Result:</strong>
           <div>{translationResult}</div>
         </div>
+        <button onClick={() => navigate("/menu")}>Go Back</button>
       </div>
+      
     </div>
   );
 }

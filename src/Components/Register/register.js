@@ -114,8 +114,11 @@ function Register() {
   };
 
   return (
-    <div onSubmit={handleRegistration}>
-      {/* Add form elements */}
+    <>
+    <div className="Container">
+    <div> Please provide your information and SignUp!
+    <div className="Registrationform">
+
       <input
         type="text"
         placeholder="First Name"
@@ -145,7 +148,7 @@ function Register() {
         placeholder="Password"
         value={password}
         onChange={(e) => handlePasswordChange(e.target.value)}
-        // onBlur={validatePassword}
+
         required
       />
       <span>{passwordError}</span>
@@ -154,7 +157,7 @@ function Register() {
         placeholder="Confirm Password"
         value={confirmPassword}
         onChange={(e) => handleConfirmPasswordChange(e.target.value)}
-        // onBlur={validateConfirmPassword}
+
         required
       />
       <span>{confirmPasswordError}</span>
@@ -165,8 +168,13 @@ function Register() {
       >
         Sign Up
       </button>
+      <button onClick={() => navigate("/login")}>Login</button>
+
       <span>{errorMsg}</span>
     </div>
+    </div></div>
+   
+    </>
   );
 }
 

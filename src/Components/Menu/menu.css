@@ -1,21 +1,35 @@
-.menu {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-    /* background-color: #fff; Background color for the menu */
-    padding: 20px; /* Padding for the menu */
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.Menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width:90%;
+  font-size: 20px;
+  font-weight:550;
   
-  .menu-button {
-    background-color: #00A699;
-    color: #fff; /* Text color for better visibility */
-    margin-bottom: 10px; /* Margin between buttons */
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .menu-button:last-child {
-    margin-bottom: 0; /* Remove margin for the last button */
-  }
-  
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px !important;
+  font-weight:300 !important;
+  text-align: center;
+  width:100%;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

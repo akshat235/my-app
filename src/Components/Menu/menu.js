@@ -7,15 +7,15 @@ const Menu = () => {
 
   return (
     <div className="Menu">
+      Please choose a task!
+
       <button onClick={() => navigate('/translation')} className="Menu">
         Translation
       </button>
       <button onClick={() => navigate('/semantic-classification')} className="Menu">
         Semantic Classification
       </button>
-      {/* <button onClick={() => navigate('/chatbot')} className="menu-button">
-        ChatBot
-      </button> */}
+
     </div>
   );
 };
