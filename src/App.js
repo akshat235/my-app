@@ -6,14 +6,15 @@ import Menu from './Components/Menu/menu';
 import Translation from './Components/Translation/translation';
 import Login from './Components/Login/login';
 import SemanticClassification from './Components/SemanticClassification/semanticClassification';
-// import Chatbot from './Components/Chatbot/chatbot';
+import LandingPage from './Components/LandingPage/landing';
+
 
 function App() {
   return (
     <Router>
       <div>
-        
         <Routes>
+          <Route path="/" element={<LandingPage/>} />
           <Route path="/translation" element={<Translation />} />
           <Route path="/login" element={<Login />} />
           <Route path="/menu" element={<Menu />} />

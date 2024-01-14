@@ -114,7 +114,7 @@ function Register() {
   };
 
   return (
-    <form onSubmit={handleRegistration}>
+    <div onSubmit={handleRegistration}>
       {/* Add form elements */}
       <input
         type="text"
@@ -166,7 +166,7 @@ function Register() {
         Sign Up
       </button>
       <span>{errorMsg}</span>
-    </form>
+    </div>
   );
 }
 

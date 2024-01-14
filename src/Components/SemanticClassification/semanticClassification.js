@@ -11,6 +11,10 @@ const SemanticClassification = () => {
   useEffect(() => {
     sendInitialRequest();
   }, []); 
+  useEffect(() => {
+    updateTextArea();
+  }, [inputText, selectedFile, prevText]);
+  
 
   const sendInitialRequest = () => {
     const initialText = "I love riding a bike";
@@ -21,7 +25,6 @@ const SemanticClassification = () => {
     setSelectedFile(null);
     setPrevText(inputText);
     setInputText('');
-    // Manually reset the input value to trigger onChange even if the same file is selected again
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -48,7 +51,6 @@ const SemanticClassification = () => {
   const removeSelectedFile = () => {
     setSelectedFile(null);
     setInputText('');
-    // Manually reset the input value to trigger onChange even if the same file is selected again
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -101,7 +103,7 @@ const SemanticClassification = () => {
         ></textarea>
       </div>
       <div>
-        <button className="get_values" onClick={startUpdate}> GET SENTIMENT </button>
+        <button className="Getalues" onClick={startUpdate}> GET SENTIMENT </button>
       </div>
       {result && (
         <div>

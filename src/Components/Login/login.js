@@ -55,30 +55,33 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => handleEmailChange(e.target.value)}
-        onBlur={validateEmail}
-        required
-      />
-      <span>{emailError}</span>
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => handlePasswordChange(e.target.value)}
-        required
-      />
-      <span>{passwordError}</span>
-      <button type="submit" onClick={handleLogin} disabled={!isFormValid}>
-        Login
-      </button>
-      <span>{errorMsg}</span>
-    </form>
+    <div id="login-container" className="Login">
+      <div id="login-form" onSubmit={handleLogin}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => handleEmailChange(e.target.value)}
+          onBlur={validateEmail}
+          required
+        />
+        <span id="email-error">{emailError}</span>
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => handlePasswordChange(e.target.value)}
+          required
+        />
+        <span id="password-error">{passwordError}</span>
+        <button type="submit" onClick={handleLogin} disabled={!isFormValid} id="login-button">
+          Login
+        </button>
+        <span id="error-message">{errorMsg}</span>
+      </div>
+    </div>
   );
+  
 }
 
 export default Login;

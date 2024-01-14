@@ -42,4 +42,8 @@ div {
     max-width: 500px;
     overflow-wrap: break-word;
   }
+
+  .base-container{
+    background-color:black;
+  }
   
