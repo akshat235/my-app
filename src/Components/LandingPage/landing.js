@@ -68,6 +68,7 @@ function LandingPage() {
   };
 
  return (
+  // {console.log("Loading correctly")}
   <div className="Landing">
     <div className="Background"></div>
     <div className="Content">
